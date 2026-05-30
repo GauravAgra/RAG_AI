@@ -26,10 +26,10 @@ retriever = vector_store.as_retriever()
 retrieved_doc = retriever.invoke(question)
 
 # Convert retrieved doc into text
-retrieved_text = ("\n").join([doc.page_content for doc in retrieved_doc])
+retrieved_text = "\n".join([doc.page_content for doc in retrieved_doc])
 print(retrieved_text, end="\n\n")
 
-# Prepare llm
+# Prepare llmō
 llm = ChatOllama(model="gemma3:270m")
 
 # Prepare prompt
